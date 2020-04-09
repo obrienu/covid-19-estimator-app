@@ -4,8 +4,8 @@ const currentlyInfected = (reportedCases, population) => {
       if (typeof reportedCases !== 'number') {
         throw new Error('Reported cases must be a number');
       } else {
-        obj.impact = ((reportedCases * 10) > population) ? population : (reportedCases * 10);
-        obj.severeImpact = ((reportedCases * 50) > population) ? population : (reportedCases * 50);
+        obj.impact = (reportedCases * 10) > population ? population : (reportedCases * 10);
+        obj.severeImpact = (reportedCases * 50) > population ? population : (reportedCases * 50);
         return obj;
       }
     } catch (err) {
