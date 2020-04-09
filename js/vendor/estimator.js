@@ -1,11 +1,11 @@
-const currentlyInfected = (reportedCases) => {
+const currentlyInfected = (reportedCases, population) => {
     try {
       const obj = {};
       if (typeof reportedCases !== 'number') {
         throw new Error('Reported cases must be a number');
       } else {
-        obj.impact = reportedCases * 10;
-        obj.severeImpact = reportedCases * 50;
+        obj.impact = ((reportedCases * 10) > population) ? population : (reportedCases * 10);
+        obj.severeImpact = ((reportedCases * 50) > population) ? population : (reportedCases * 50);
         return obj;
       }
     } catch (err) {
@@ -96,7 +96,7 @@ const currentlyInfected = (reportedCases) => {
       }
     } = data;
   
-    const { impact: currentlyInfectedPersons } = currentlyInfected(reportedCases);
+    const { impact: currentlyInfectedPersons } = currentlyInfected(reportedCases, population);
     const infectionsByRequestedTime = projectedInfected(currentlyInfectedPersons,
       timeToElapse, periodType, population);
     const severeCasesByRequestedTime = severeCases(infectionsByRequestedTime);
@@ -129,7 +129,7 @@ const currentlyInfected = (reportedCases) => {
         avgDailyIncomePopulation,
       }
     } = data;
-    const { severeImpact: currentlyInfectedPersons } = currentlyInfected(reportedCases);
+    const { severeImpact: currentlyInfectedPersons } = currentlyInfected(reportedCases, population);
     const infectionsByRequestedTime = projectedInfected(currentlyInfectedPersons,
       timeToElapse, periodType, population);
     const severeCasesByRequestedTime = severeCases(infectionsByRequestedTime);

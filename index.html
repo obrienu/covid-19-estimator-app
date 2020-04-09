@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title></title>
-    <meta name="description" content="" />
+    <title>COVID 19 ESTIMATOR</title>
+    <meta name="description" content="A Novelty COVID-19 Estimator/ stats calculator using stats from Harvard Medical School / Massachusetts General Hospital" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
@@ -31,14 +31,13 @@
     <![endif]-->
 
     <header class="header">
-      <img src="/img/logo.png" alt="" class="header-logo" />
+      <img src="img/logo.png" alt="" class="header-logo" />
       <div class="brand">
         <span class="brand-name">Covid 19 Estimator</span>
         <span class="brand-text">Covid 19 statistics estimator app</span>
       </div>
     </header>
-
-    <main>
+    <main id="main">
       <hr class="line" />
       <div class="scroll-left">
         <h1 class="main-header">
@@ -212,7 +211,7 @@
             <div class="flip-back flip-card-inner">
               <section class="flip-card-front">
                 <header class="box-header">
-                  Impact
+                  Impact <span class="arrow" >&rarr;</span>
                 </header>
                 <main class="box-body">
                   <div class="body-text-area ">
@@ -267,13 +266,15 @@
               </section>
               <section class="flip-card-back">
                 <header class="box-header">
-                  Do
+                  Do  <span class="arrow" >&larr;</span>
                 </header> 
                 <main class="box-body">
-                  <li>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</li> 
-                  <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</li>
-                  <li>Avoid close contact (1 meter or 3 feet) with people who are unwell</li>
-                  <li>Stay home and self-isolate from others in the household if you feel unwell</li>
+                  <ul>
+                    <li>Wash your hands regularly for 20 seconds, with soap and water or alcohol-based hand rub</li> 
+                    <li>Cover your nose and mouth with a disposable tissue or flexed elbow when you cough or sneeze</li>
+                    <li>Avoid close contact (1 meter or 3 feet) with people who are unwell</li>
+                    <li>Stay home and self-isolate from others in the household if you feel unwell</li>  
+                  </ul>
                 </main>
                 <a class="btn btn-success btn-block section-footer" target="blank" href="https://ncdc.gov.ng/contact/">
                   VISIT NCDC WEBSITE
@@ -292,7 +293,7 @@
             <div class="flip-card-inner flip-back ">
               <section class="flip-card-front">
                 <header class="box-header">
-                  Severe Impact
+                  Severe Impact<span class="arrow" >&rarr;</span>
                 </header>
                 <main class="box-body">
                   <div class="body-text-area">
@@ -347,13 +348,17 @@
               </section>
               <section class="flip-card-back">
                 <header class="box-header">
-                  Don'ts
+                  Don'ts       <span class="arrow" >&larr;</span>
+
                 </header> 
                 <main class="box-body">
-                  <li>Do not touch your eyes, nose, or mouth if your hands are not clean</li> 
-                  <li>Don't not stay in a crowded gathering, maintain social distancing</li>
-                  <li>Do not go to work or mingle with people if you are feeling sick. Contact the help line and self isolate.</li>
-                  <li>Do not self medicate, contact NCDC if you feel any of the symptoms</li>
+                  <ul>
+                    <li>Do not touch your eyes, nose, or mouth if your hands are not clean</li> 
+                    <li>Don't not stay in a crowded gathering, maintain social distancing</li>
+                    <li>Do not go to work or mingle with people if you are feeling sick. Contact the help line and self isolate.</li>
+                    <li>Do not self medicate, contact NCDC if you feel any of the symptoms</li>
+  
+                  </ul>
                 </main>
                 <a class="btn btn-success btn-block section-footer" href="tel:080097000010">
                   <img src="./img/call.png" alt="web icon" class="icon">
@@ -362,11 +367,10 @@
               </section>
             </div>
         </section>
-
-
-        
     </main>
-
+    <footer class="main-footer">
+      Copyright © 2020 Designed by Brien Pisces Tech 
+    </footer>
     <!-- infections predictor estimator using data Harvard Medical School / Massachusetts General Hospital -->
     <!-- Add your site or application content here -->
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>

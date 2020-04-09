@@ -262,8 +262,13 @@ textarea {
     page-break-after: avoid;
   }
 }
-*{
+* {
   box-sizing: border-box;
+}
+
+ul {
+  padding: 0.5rem;
+  list-style: none;
 }
 
 :root {
@@ -271,6 +276,10 @@ textarea {
   --background-color: #eff0bb;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
 /* ==========================================================================
                                 BODY
    ========================================================================== */
@@ -279,11 +288,13 @@ body {
   width: 100vw;
   height: 100%;
   background-color: #eff0bb;
-  background-image: url("../img/bg.png");
+  background-image: url("../img/bg.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
   border-top: 10px solid var(--header-text);
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -321,8 +332,10 @@ header div.brand span.brand-text {
                                 body
    ========================================================================== */
 
-main {
+main#main {
   width: 100%;
+  margin-bottom: 2rem;
+  min-height: calc(100vh - 96px - 5rem);
 }
 
 .main-header {
@@ -343,18 +356,13 @@ section.main-section {
   overflow-x: scroll;
   scroll-behavior: smooth;
   padding: 1rem;
-  max-height: 70vh;
   display: flex;
   margin: 0 1rem;
   padding-left: 0;
 }
 
 @media screen and (min-width: 501px) {
-  
 }
-
-
-  
 
 section.box {
   background: white;
@@ -368,25 +376,22 @@ section.box {
   position: relative;
 }
 @media screen and (min-width: 769px) {
-
   section.main-section {
     overflow-x: unset;
     justify-content: space-around;
     flex-flow: row wrap;
     padding: 0;
-  max-height: 70vh;
-  display: flex;
-  margin: 0;
+    display: flex;
+    margin: 0;
   }
   section.box {
     background: white;
     min-width: 20rem;
     max-width: 20rem;
     height: 25rem;
-    margin: auto;
+    margin: 1rem auto;
   }
 }
-
 
 header.box-header {
   font-size: 1.5rem;
@@ -396,6 +401,14 @@ header.box-header {
   height: 3rem;
   line-height: 3rem;
   color: #000;
+  cursor: pointer;
+}
+
+.arrow {
+  float: right;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: bisque;
 }
 
 .input-group {
@@ -409,13 +422,12 @@ header.box-header {
 }
 
 .section-footer {
+  color: black;
   position: absolute;
   bottom: 0;
   font-size: 1.5rem;
   font-weight: 600;
 }
-
-
 
 @media screen and (min-width: 769px) {
   .section-footer {
@@ -423,12 +435,11 @@ header.box-header {
     height: 3rem;
   }
 
-  .icon{
+  .icon {
     width: 1.5rem;
     height: auto;
   }
 }
-
 
 .form-input {
   padding: 0 1rem;
@@ -471,14 +482,13 @@ header.box-header {
 
 main.box-body {
   padding: 0 0.5rem;
-  
 }
 
-main.box-body li{
+main.box-body li {
   font-size: 1.3rem;
-  font-family: 'EB Garamond', serif;
-color:#495057 ;
-text-align: justify;
+  font-family: "EB Garamond", serif;
+  color: #495057;
+  text-align: justify;
 }
 
 div.body-text-area {
@@ -492,6 +502,10 @@ div.body-text-area {
   height: 2rem;
 }
 
+div.body-text-area:first-child {
+  margin-top: 1px;
+}
+
 span.text-title {
   align-items: center;
   padding: 0 0.75rem;
@@ -503,7 +517,7 @@ span.text-title {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-   border: 1px solid #ced4da;
+  border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
 
@@ -518,27 +532,47 @@ span.text-info {
   color: #495057;
   white-space: nowrap;
 }
-@media screen and (min-width: 769px) {
 
-  main.box-body li{
+.main-footer {
+  height: 3rem;
+  color: #495057;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--header-text);
+  position: relative;
+  width: 100%;
+  line-height: 3rem;
+  bottom: 0;
+}
+
+@media screen and (min-width: 769px) {
+  main.box-body li {
     font-size: 1.1rem;
   }
 
   div.body-text-area {
-margin-bottom: 2px; 
-height: 1.7rem;
- }
- .input-group{
-   height: 1.6rem;
-   font-size: 0.8rem;
- }
+    margin-bottom: 2px;
+    height: 1.7rem;
+  }
+  .input-group {
+    height: 1.6rem;
+    font-size: 0.8rem;
+  }
 
- .input-group-text{
-  font-size: 0.8rem;
- }
+  .input-group-text {
+    font-size: 0.8rem;
+  }
 
+  span.text-title,
+  span.text-info {
+    font-size: 0.8rem;
+  }
+
+  .main-footer {
+    font-size: 1rem;
+  }
 }
-
 
 /* ==========================================================================
                                 Utils
@@ -555,7 +589,6 @@ height: 1.7rem;
 }
 
 .scroll-left h1 {
-  
   transform: translateX(100%);
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
