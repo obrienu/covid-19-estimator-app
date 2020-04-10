@@ -8,12 +8,12 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
-    />
+    /> -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
 
@@ -53,14 +53,12 @@
           <header class="box-header">
             Input Data
           </header>
-          <form id="form"  action="">
+          <form id="form"  class="mt-2">
             <div class="form-input">
-              <div class="input-group mb-2 mt-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon1"
                     >Population</span
                   >
-                </div>
                 <input
                   type="number"
                   data-population
@@ -72,12 +70,10 @@
                   required
                 />
               </div>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <label class="input-group-text"  for="inputGroupSelect01"
+              <div class="form-control mb-2">
+                  <label class="input-group-append"  for="inputGroupSelect01"
                     >Select Period Type</label
                   >
-                </div>
                 <select
                   data-period-type
                   class="custom-select"
@@ -90,12 +86,10 @@
                   <option value="months">Month/s</option>
                 </select>
               </div>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon2"
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon2"
                     >Time To Elapse</span
                   >
-                </div>
                 <input
                   type="number"
                   data-time-to-elapse
@@ -107,12 +101,10 @@
                   required
                 />
               </div>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon3"
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon3"
                     >Reported Cases</span
                   >
-                </div>
                 <input
                   type="number"
                   data-reported-cases
@@ -124,12 +116,10 @@
                   required
                 />
               </div>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon4"
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon4"
                     >Hospital Beds</span
                   >
-                </div>
                 <input
                 min='1'
                   type="number"
@@ -143,12 +133,10 @@
                 />
               </div>
   
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon6"
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon6"
                     >Average Age</span
                   >
-                </div>
                 <input
                   type="number"
                   data-average-age
@@ -160,10 +148,8 @@
                   required
                 />
               </div>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon7">$</span>
-                </div>
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon7">$</span>
                 <input
                   type="number"
                   data-average-daily-income
@@ -176,10 +162,8 @@
                 />
               </div>
   
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon8">% / 100</span>
-                </div>
+              <div class="form-control mb-2">
+                  <span class="input-group-append" id="basic-addon8">% / 100</span>
                 <input
                   type="number"
                   data-average-daily-income-population
@@ -372,33 +356,14 @@
     </footer>
     <!-- infections predictor estimator using data Harvard Medical School / Massachusetts General Hospital -->
     <!-- Add your site or application content here -->
-    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
-        );
-    </script>
-    <script src="js/plugins.js"></script>
+   
     <script src="js/vendor/estimator.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
-      ga("set", "transport", "beacon");
-      ga("send", "pageview");
-    </script>
-    <!-- <script src="https://www.google-analytics.com/analytics.js" async></script> -->
   </body>
 </html>
