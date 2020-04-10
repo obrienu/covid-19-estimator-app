@@ -19,7 +19,7 @@ a:active{
 
 :root {
   --header-text: #195839;
-  --background-color: #eaec66;
+  --background-color: #fbfcc5;
 }
 
 html {
@@ -34,7 +34,7 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--background-color);
   background-image: url("../img/bg.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -251,8 +251,9 @@ main.box-body {
 }
 
 main.box-body li {
-  font-size: 1.5rem;
-  font-family:  monospace;  color: #000;
+  font-size: 1rem;
+  font-family:  monospace; 
+   color: #000;
   text-align: justify;
 }
 
