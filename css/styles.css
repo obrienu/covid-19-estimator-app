@@ -197,7 +197,10 @@ header.box-header {
     height: 3rem;
   }
 
-
+  .icon {
+    width: 50;
+    height: 50;
+  }
 }
 
 .form-input {
